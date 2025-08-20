@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="Public/script.js" defer></script>
+
+    <title>Lista de tareas</title>
+  </head>
+  <body class="bg-stone-300 flex flex-col items-center">
+    <style>
+      header {
+        font-family: "Edu NSW ACT Cursive", cursive;
+        font-weight: 700;
+      }
+
+      article {
+        font-family: "Caveat", sans-serif;
+        font-weight: 700;
+      }
+    </style>
+
+    <header class="h-15 bg-stone-400 flex justify-center items-center w-full">
+      <h1 class="text-stone-950 text-3xl align-middle">Lista de Tareas</h1>
+    </header>
+
+    <article
+      class="bg-stone-50 m-10 portrait:w-6/7 landscape:w-2/4 p-5 rounded-xl"
+    >
+      <input class="p-2" type="text" id="taskInput" placeholder="Nueva Tarea" />
+
+      <button
+        class="bg-stone-200 p-2 rounded-md cursor-pointer hover:bg-stone-100"
+        id="addButton"
+      >
+        Agregar tarea
+      </button>
+
+      <ul id="taskList">
+        <li class="taskElement hidden">
+          <input class="cursor-pointer" type="checkbox" />
+          <span>Ejemplo</span>
+          <button
+            class="cursor-pointer text-stone-400 hover:text-stone-950 ml-5"
+          >
+            X
+          </button>
+        </li>
+      </ul>
+
+      <p id="pendingTasks">Tienes 0 tareas pendientes</p>
+      <button
+        class="bg-stone-200 hover:bg-stone-100 p-2 rounded-md cursor-pointer"
+        id="clearButton"
+      >
+        Eliminar todas las tareas
+      </button>
+    </article>
+  </body>
+</html>
